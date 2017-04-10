@@ -1,0 +1,11 @@
+@* unemployTable Template File *@
+@(series: String, data: Seq[Tables.DataRow])
+
+<p>Data for @series.</p>
+
+<table border="1">
+	<tr><th>Year</th><th>Period</th><th>Value</th></tr>
+	@for(d <- data) {
+		<tr><td>@d.year</td><td>@d.period</td><td>@d.value</td></tr>
+	}
+</table>

@@ -1,0 +1,15 @@
+@* unemploySeries Template File *@
+@(series: Seq[Tables.SeriesRow])
+
+@main2("Unemployment Data") {
+	<h1>Series Selection</h1>
+	<p>Select the series that you want to view data for.</p>
+	<select id="selector">
+		@for(s <- series) {
+			<option value=@s.seriesId>@s.seriesTitle</option>
+		}
+	</select>
+	<div id="table">
+		
+	</div>
+}
